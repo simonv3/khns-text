@@ -29,7 +29,7 @@ nunjucks.configure('views', {
 app.get('/', authenticationMiddleware, index)
 app.get('/twilio-webhook', webhookResponse)
 
-http.listen(process.env.PORT || 5000, function () {
+http.listen(process.env.PORT || 3000, function () {
   console.log(`Server listening on port ${process.env.PORT}!`)
 })
 
