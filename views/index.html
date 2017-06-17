@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>KHNS Text</title>
+    <link rel="stylesheet" href="https://cdnjs.com/libraries/normalize">
+    <link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
+  </head>
+  <body>
+    <div container>
+      <h1>Welcome to KHNS Text</h1>
+      <h2>Texts received today</h2>
+      <ul>
+        {% for message in messages %}
+          {% include "item.html" %}
+        {% endfor %}
+      </ul>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+      socket.on('new-text', function () {
+        window.location.reload();
+      })
+    </script>
+  </body>
+</html>

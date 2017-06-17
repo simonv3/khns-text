@@ -1,0 +1,21 @@
+{
+  "name": "khns-texts",
+  "version": "1.0.0",
+  "description": "Connecting your radio station to your texts",
+  "main": "server.js",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "express": "^4.15.3",
+    "helmet": "^3.6.1",
+    "moment": "^2.18.1",
+    "nunjucks": "^3.0.1",
+    "socket.io": "^2.0.3",
+    "twilio": "^3.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
