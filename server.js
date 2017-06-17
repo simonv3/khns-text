@@ -39,7 +39,7 @@ function authenticationMiddleware (req, res, next) {
 }
 
 function index (req, res) {
-  getMessagesSinceDay(moment().format('YYYY-MM-DD'))
+  getMessagesSinceDay(moment().subtract(7, 'days').format('YYYY-MM-DD'))
     .then((messages) => {
 
       res.render('index.html', {
